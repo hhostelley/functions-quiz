@@ -10,6 +10,14 @@ print has_teen(14) # expect True
 print has_teen(5) # expect False
 print has_teen(58) # expect False
 
+def not_string(note):
+	if note.startswith ("not"):
+		return note + ("not")
+	else: 
+		return ("not ") + note
+
+print not_string("friendly") # expect not friendly
+print not_string("not a good ") # expect not a good not
 
 def icy_hot(icy, hot):
 	if icy < 0 and hot > 100:
@@ -45,4 +53,22 @@ print two_as_one(5, 2, 3) # expect True
 print two_as_one(1, 4, 3) # expect True
 print two_as_one(1, 7, 3) # expect False
 
-# TODO - write pig_latinify
+def pig_latinify(word):
+	if word.startswith ("a"):
+		return word + ("way")
+	if word .startswith ("e"):
+		return word + ("way")
+	if word .startswith ("i"):
+		return word + ("way")
+	if word .startswith ("o"):
+		return word + ("way")
+	if word .startswith ("u"):
+		return word + ("way")
+
+
+print pig_latinify("apple") # expect appleway
+print pig_latinify("unicorn") # expect unicornway
+print pig_latinify("iguana") # expect iguanaway
+print pig_latinify("octupus") # expect octupusway
+print pig_latinify("eagle") # expect eagleway
+
